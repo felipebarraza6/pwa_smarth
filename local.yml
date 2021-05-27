@@ -1,0 +1,8 @@
+version: '3'
+
+services:
+  react:
+    build: .
+    image: ui_sh
+    ports:
+      - "80:80"                    
