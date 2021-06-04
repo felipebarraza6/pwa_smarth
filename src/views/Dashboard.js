@@ -185,8 +185,8 @@ const Dashboard = () => {
                   </Col>
                   <Col xs="7">
                     <div className="numbers">
-                      <p className="card-category">Nivel de Estanque(metros)</p>
-                      <CardTitle tag="h3">2.16</CardTitle>
+                      <p className="card-category">Caudal(ltrs)</p>
+                      <CardTitle tag="h3">3.16</CardTitle>
                     </div>
                   </Col>
                 </Row>

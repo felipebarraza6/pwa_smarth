@@ -39,25 +39,16 @@ const RegularTables = () => {
                     { text: "Nombre" },
                     { text: "Cargo" },
                     { text: "Telefono" },
-                    { text: "Correo" },
                   ]}
                   tbody={[
                     {
                       data: [
-                        { text: "Elisardo Mendoza" },
+                        { text: "Damian Huanque" },
                         { text: "Operador" },
-                        { text: "946904626" },
-                        { text: "comite.ap.bramadero@gmail.com" }, 
+                        { text: "+56 9 9617 7817" },
                       ],
-                    },
-                    {
-                      data: [
-                        { text: "Isabel" },
-                        { text: "Presidenta" },
-                        { text: "941318204" },
-                        { text: "comite.ap.bramadero@gmail.com" }, 
-                      ],
-                    },                                       
+                     },
+                                                          
                   ]}
                 />
               </CardBody>

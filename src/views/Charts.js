@@ -34,7 +34,7 @@ const Charts = () => {
   return (
     <>
       <div className="content">
-        <h2 className="text-center">Nivel de pozo & Nivel de estanque</h2>      
+        <h2 className="text-center">Nivel de pozo & Nivel de caudal</h2>      
         <div style={{marginBottom:'0px'}}>
 
         </div>
@@ -61,9 +61,9 @@ const Charts = () => {
           <Col className="mr-auto" md="5">
             <Card className="card-chart">
               <CardHeader>
-                <h5 className="card-category">PROMEDIO EN METROS</h5>
+                <h5 className="card-category">PROMEDIO EN LITROS</h5>
                 <CardTitle tag="h3">
-                  <i className="tim-icons icon-chart-bar-32 text-info" /> Nivel de estanque
+                  <i className="tim-icons icon-chart-bar-32 text-info" /> Nivel de caudal
                 </CardTitle>
               </CardHeader>
               <CardBody>

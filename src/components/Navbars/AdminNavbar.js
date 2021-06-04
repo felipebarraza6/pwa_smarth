@@ -133,7 +133,7 @@ const AdminNavbar = (props) => {
               <UncontrolledDropdown nav style={{marginTop:'10px'}}>
                   <div>
                     <Button>
-                    bramadero@smarthydro.cl
+                    lumahue@smarthydro.cl
                     </Button>
                   </div>
               </UncontrolledDropdown>
