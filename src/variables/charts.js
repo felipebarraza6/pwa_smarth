@@ -1,24 +1,4 @@
-/*!
 
-=========================================================
-* Black Dashboard PRO React - v1.2.0
-=========================================================
-
-* Product Page: https://www.creative-tim.com/product/black-dashboard-pro-react
-* Copyright 2020 Creative Tim (https://www.creative-tim.com)
-
-* Coded by Creative Tim
-
-=========================================================
-
-* The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
-
-*/
-// ##############################
-// // // Chart variables
-// #############################
-
-// chartExample1 and chartExample2 options
 let chart_1_2_3_options = {
   maintainAspectRatio: false,
   legend: {
@@ -67,11 +47,9 @@ let chart_1_2_3_options = {
       },
     ],
   },
-};
+}
 
-// #########################################
-// // // used inside src/views/Dashboard.js
-// #########################################
+
 let chartExample1 = {
   data1: (canvas) => {
     let ctx = canvas.getContext("2d");
@@ -107,8 +85,8 @@ let chartExample1 = {
           pointBorderWidth: 20,
           pointHoverRadius: 4,
           pointHoverBorderWidth: 15,
-          pointRadius: 4,
-          data: [216332, 246212, 196241, 151222, 201222, 131666, 221239],
+          pointRadius: 6,
+          data: [5, 5, 5, 5, 5, 5, 5],
         },
       ],
     };
@@ -118,9 +96,9 @@ let chartExample1 = {
 
     let gradientStroke = ctx.createLinearGradient(0, 230, 0, 50);
 
-    gradientStroke.addColorStop(1, "rgba(29,140,248,0.2)");
-    gradientStroke.addColorStop(0.4, "rgba(29,140,248,0.0)");
-    gradientStroke.addColorStop(0, "rgba(29,140,248,0)"); //blue colors
+    gradientStroke.addColorStop(1, "rgba(29,140,248,0.2)")
+    gradientStroke.addColorStop(0.4, "rgba(29,140,248,0.0)")
+    gradientStroke.addColorStop(0, "rgba(29,140,248,0)")
 
     return {
       labels: [

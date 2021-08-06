@@ -1,98 +1,101 @@
-/*!
 
-=========================================================
-* Black Dashboard PRO React - v1.2.0
-=========================================================
+import React, { useContext, useState} from "react"
 
-* Product Page: https://www.creative-tim.com/product/black-dashboard-pro-react
-* Copyright 2020 Creative Tim (https://www.creative-tim.com)
+import logo_src from '../../assets/img/logo-white.png'
+import 'antd/dist/antd.css'
+import { Row, Col, Typography, Form, Input, Button } from 'antd'
+import {AuthContext} from '../../App'
+import api from '../../api/endpoints'
 
-* Coded by Creative Tim
+const { Title, Text } = Typography
 
-=========================================================
+const Pages = () => {
+  
+  const {dispatch} = useContext(AuthContext)
 
-* The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+  const initialState = {
+    email: '',
+    password: '',
+    isSubmitting: false,
+    error: null
+  }
+  
+  const [state, setState] = useState(initialState)
 
-*/
-import React from "react";
-import { Route, Switch, Redirect } from "react-router-dom";
+  const onFinish = async(values) => {
+    try{
+      const request = await api.authenticated(state)
+      
+      dispatch({
+        type: 'LOGIN',
+        payload: request
+      })
 
-import AuthNavbar from "components/Navbars/AuthNavbar.js";
-import Footer from "components/Footer/Footer.js";
-
-import routes from "routes.js";
-
-const Pages = (props) => {
-  React.useEffect(() => {
-    document.documentElement.classList.remove("nav-open");
-  });
-  const getRoutes = (routes) => {
-    return routes.map((prop, key) => {
-      if (prop.collapse) {
-        return getRoutes(prop.views);
-      }
-      if (prop.layout === "/auth") {
-        return (
-          <Route
-            path={prop.layout + prop.path}
-            component={prop.component}
-            key={key}
-          />
-        );
-      } else {
-        return null;
-      }
-    });
-  };
-  const getActiveRoute = (routes) => {
-    let activeRoute = "Default Brand Text";
-    for (let i = 0; i < routes.length; i++) {
-      if (routes[i].collapse) {
-        let collapseActiveRoute = getActiveRoute(routes[i].views);
-        if (collapseActiveRoute !== activeRoute) {
-          return collapseActiveRoute;
-        }
-      } else {
-        if (
-          window.location.pathname.indexOf(
-            routes[i].layout + routes[i].path
-          ) !== -1
-        ) {
-          return routes[i].name;
-        }
-      }
+      return request
+    } catch(error) {
+      console.log(error)
     }
-    return activeRoute;
-  };
-  const getFullPageName = (routes) => {
-    let pageName = getActiveRoute(routes);
-    switch (pageName) {
-      case "Pricing":
-        return "pricing-page";
-      case "Login":
-        return "login-page";
-      case "Register":
-        return "register-page";
-      case "Lock Screen":
-        return "lock-page";
-      default:
-        return "Default Brand Text";
-    }
-  };
+  }
+
+  const handleInputChange = e => {
+    setState({
+        ...state,
+        [e.target.name]: e.target.value
+    })
+}
+
+  console.log(state)
+
+  const [form] = Form.useForm()
+
   return (
-    <>
-      <AuthNavbar brandText={getActiveRoute(routes) + " Page"} />
-      <div className="wrapper wrapper-full-page">
-        <div className={"full-page " + getFullPageName(routes)}>
-          <Switch>
-            {getRoutes(routes)}
-            <Redirect from="*" to="/auth/login" />
-          </Switch>
-          <Footer fluid />
-        </div>
-      </div>
+    <>      
+        <div>
+          <Row justify="center">            
+            <Col style={styles.col} span={24}>
+              <img src={logo_src} alt='logo' width='300px' />
+            </Col>
+            <Col>
+              <Title style={styles.title}>Central de datos</Title>
+              <Form onFinish={onFinish} form={form} layout='vertical' name='form_login'>
+                <Form.Item name='user' label={<Text style={styles.label}>Usuario</Text>} >
+                  <Input placeholder='Usuario' name='email' onChange={handleInputChange} />
+                </Form.Item>
+                <Form.Item name='password' label={<Text style={styles.label}>Contraseña</Text>} >
+                  <Input type='password' name='password' placeholder='Contraseña' onChange={handleInputChange} />
+                </Form.Item>
+                <Form.Item>
+                  <Button htmlType='submit' type='primary' size='large' style={styles.btn}>Ingresar</Button>
+                  <Button type='primary' onClick={()=>form.resetFields()} danger size='large' style={styles.btn}>Limpiar</Button>
+                </Form.Item>
+              </Form>
+            </Col>
+          </Row>                              
+        </div>      
     </>
-  );
-};
+  )
+}
 
-export default Pages;
+
+const styles = {
+    container: {
+        margin: '30px'
+    }, 
+    title: {
+      color: 'white',
+      textAlign: 'center'
+    },
+    col : {
+      marginTop: '10%',
+      textAlign: 'center',
+      marginBottom: '1%'
+    },
+    btn: {
+      marginRight: '20px'
+    },
+    label: {
+      color: 'white',
+    }
+}
+
+export default Pages

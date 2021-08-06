@@ -1,21 +1,7 @@
-/*!
+import React, { useContext } from "react";
 
-=========================================================
-* Black Dashboard PRO React - v1.2.0
-=========================================================
+import { AuthContext } from '../../App'
 
-* Product Page: https://www.creative-tim.com/product/black-dashboard-pro-react
-* Copyright 2020 Creative Tim (https://www.creative-tim.com)
-
-* Coded by Creative Tim
-
-=========================================================
-
-* The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
-
-*/
-import React from "react";
-// nodejs library that concatenates classes
 import classNames from "classnames";
 
 // reactstrap components
@@ -38,6 +24,12 @@ import {
 } from "reactstrap";
 
 const AdminNavbar = (props) => {
+
+  const {state, dispatch} = useContext(AuthContext)
+
+  var userContext = state.user
+
+
   const [collapseOpen, setCollapseOpen] = React.useState(false);
   const [modalSearch, setModalSearch] = React.useState(false);
   const [color, setColor] = React.useState("navbar-transparent");
@@ -133,13 +125,15 @@ const AdminNavbar = (props) => {
               <UncontrolledDropdown nav style={{marginTop:'10px'}}>
                   <div>
                     <Button>
-                    lumahue@smarthydro.cl
+                      {userContext.email} 
                     </Button>
                   </div>
               </UncontrolledDropdown>
               <UncontrolledDropdown nav style={{marginTop:'10px'}}>
                   <div>
-                    <Button>
+                    <Button onClick={()=> dispatch({
+                      type: 'LOGOUT'
+                    })}>
                     CERRAR SESION
                     </Button>
                   </div>
