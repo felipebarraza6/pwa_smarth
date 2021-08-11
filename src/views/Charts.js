@@ -16,25 +16,21 @@
 */
 import React from "react";
 // react plugin used to create charts
-import { Line, Bar, Pie } from "react-chartjs-2";
+import { Line } from "react-chartjs-2";
 // reactstrap components
 import { Card, CardHeader, CardBody, CardTitle, Row, Col } from "reactstrap";
 
 // core components
 import {
   chartExample5,
-  chartExample6,
-  chartExample7,
-  chartExample8,
-  chartExample9,
-  chartExample10,
+  chartExample6,  
 } from "variables/charts.js";
 
 const Charts = () => {
   return (
     <>
       <div className="content">
-        <h2 className="text-center">Nivel de pozo & Nivel de caudal</h2>      
+        <h2 className="text-center" style={{color: "white"}} >Nivel de pozo & Nivel de caudal</h2>      
         <div style={{marginBottom:'0px'}}>
 
         </div>

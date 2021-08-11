@@ -26,7 +26,7 @@ const RegularTables = () => {
   return (
     <>
       <div className="content">
-      <h2 className="text-center">REPORTES</h2>  
+      <h2 className="text-center" style={{color: 'white'}} >Reportes</h2>  
         <Row>
           <Col className="mb-5" md="12">
             <Card>

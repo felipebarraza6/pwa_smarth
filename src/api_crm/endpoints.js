@@ -11,9 +11,9 @@ const login = async(data) =>{
 }
 
 
-const api = {
+const api_crm = {
     authenticated: login
 }
 
 
-export default api
+export default api_crm

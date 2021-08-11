@@ -1,4 +1,5 @@
 
+
 let chart_1_2_3_options = {
   maintainAspectRatio: false,
   legend: {
@@ -8,7 +9,7 @@ let chart_1_2_3_options = {
     backgroundColor: "#f5f5f5",
     titleFontColor: "#333",
     bodyFontColor: "#666",
-    bodySpacing: 4,
+    bodySpacing: 40,
     xPadding: 12,
     mode: "nearest",
     intersect: 0,
@@ -50,15 +51,9 @@ let chart_1_2_3_options = {
 }
 
 
-let chartExample1 = {
-  data1: (canvas) => {
-    let ctx = canvas.getContext("2d");
-
-    let gradientStroke = ctx.createLinearGradient(0, 230, 0, 50);
-
-    gradientStroke.addColorStop(1, "rgba(29,140,248,0.2)");
-    gradientStroke.addColorStop(0.4, "rgba(29,140,248,0.0)");
-    gradientStroke.addColorStop(0, "rgba(29,140,248,0)"); //blue colors
+let dashboard = {
+  data1: () => {
+    
 
     return {
       labels: [
@@ -74,7 +69,7 @@ let chartExample1 = {
         {
           label: "M3",
           fill: true,
-          backgroundColor: gradientStroke,
+          
           borderColor: "#1f8ef1",
           borderWidth: 2,
           borderDash: [],
@@ -833,7 +828,8 @@ const chartExample10 = {
 };
 
 module.exports = {
-  chartExample1, // in src/views/Dashboard.js
+  dashboard, // in src/views/Dashboard.js
+  chart_1_2_3_options,
   chartExample2, // in src/views/Dashboard.js
   chartExample3, // in src/views/Dashboard.js
   chartExample4, // in src/views/Dashboard.js

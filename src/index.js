@@ -1,9 +1,7 @@
-import React, { useContext, useState } from "react"
+import React from "react"
 import ReactDOM from "react-dom"
-import { BrowserRouter, Route, Switch, Redirect } from "react-router-dom"
+import { BrowserRouter, Route, Switch } from "react-router-dom"
 
-import AuthLayout from "layouts/Auth/Auth.js"
-import AdminLayout from "layouts/Admin/Admin.js"
 
 import "assets/css/nucleo-icons.css"
 import "react-notification-alert/dist/animate.css"
@@ -18,4 +16,4 @@ ReactDOM.render(
     </Switch>
   </BrowserRouter>,
   document.getElementById("root")
-);
+)

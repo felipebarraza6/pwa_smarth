@@ -1,26 +1,14 @@
-/*!
 
-=========================================================
-* Black Dashboard PRO React - v1.2.0
-=========================================================
-
-* Product Page: https://www.creative-tim.com/product/black-dashboard-pro-react
-* Copyright 2020 Creative Tim (https://www.creative-tim.com)
-
-* Coded by Creative Tim
-
-=========================================================
-
-* The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
-
-*/
 import React from "react";
 
-import { Button, CustomInput } from "reactstrap";
+//import { CustomInput } from "reactstrap";
 
 const FixedPlugin = (props) => {
+  /*
   const [classes, setClasses] = React.useState("dropdown");
+  
   const [darkMode, setDarkMode] = React.useState(false);
+  
   const handleClick = () => {
     if (classes === "dropdown") {
       setClasses("dropdown show");
@@ -32,10 +20,9 @@ const FixedPlugin = (props) => {
     setDarkMode(!darkMode);
     document.body.classList.toggle("white-content");
   };
-  return (
-    <div className="fixed-plugin">
-      <div className={classes}>
-        <a
+
+  
+    <a
           href="#pablo"
           onClick={(e) => {
             e.preventDefault();
@@ -135,7 +122,14 @@ const FixedPlugin = (props) => {
           <li className="button-container">           
           </li>
         </ul>
+        <div className={classes}>
+        
       </div>
+  */
+
+  return (
+    <div className="fixed-plugin">
+      
     </div>
   );
 };

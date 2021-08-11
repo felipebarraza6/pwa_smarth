@@ -29,7 +29,6 @@ import FixedPlugin from "components/FixedPlugin/FixedPlugin.js";
 
 import routes from "routes.js";
 
-import logo from "assets/img/react-logo.png";
 
 var ps;
 
@@ -163,8 +162,9 @@ const Admin = (props) => {
   return (
     <div className="wrapper">
       <div className="rna-container">
-        <NotificationAlert ref={notificationAlertRef} />
+        <NotificationAlert ref={notificationAlertRef} />        
       </div>
+      
       <div className="navbar-minimize-fixed" style={{ opacity: opacity }}>
         <button
           className="minimize-sidebar btn btn-link btn-just-icon"
@@ -173,7 +173,7 @@ const Admin = (props) => {
           <i className="tim-icons icon-align-center visible-on-sidebar-regular text-muted" />
           <i className="tim-icons icon-bullet-list-67 visible-on-sidebar-mini text-muted" />
         </button>
-      </div>
+      </div> 
       <Sidebar
         {...props}
         routes={routes}
