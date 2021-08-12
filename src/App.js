@@ -32,7 +32,6 @@ function App(props) {
         }
       })
     }
-
   }, [])
 
 
@@ -44,8 +43,10 @@ function App(props) {
         dispatch
       }}
     >
-      <div className="App">
-        {!state.isAuthenticated ? <AuthLayout {...props} /> : <AdminLayout {...props} />}
+      <div className="App" style={{backgroundColor:'#030852'}}>
+        {!state.isAuthenticated ? 
+          <AuthLayout {...props} /> : <AdminLayout {...props} />
+        }
       </div>
 
     </AuthContext.Provider>

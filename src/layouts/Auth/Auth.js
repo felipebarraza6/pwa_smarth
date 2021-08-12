@@ -48,7 +48,7 @@ const Pages = () => {
 
   return (
     <>      
-        <div>
+        <div style={{backgroundColor:'#002766', height: '800px' }}>
           <Row justify="center">            
             <Col style={styles.col} span={24}>
               <img src={logo_src} alt='logo' width='300px' />
@@ -77,7 +77,7 @@ const Pages = () => {
 
 const styles = {
     container: {
-        margin: '30px'
+        margin: '30px',        
     }, 
     title: {
       color: 'white',
