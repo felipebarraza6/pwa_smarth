@@ -50,7 +50,7 @@ const Dashboard = () => {
                   </Col>
                   <Col xs="7">
                     <div className="numbers">
-                      <p className="card-category">Caudal(ltrs)</p>
+                      <p className="card-category">Nivel de estanque(litros))</p>
                       <CardTitle tag="h3">3.16</CardTitle>
                     </div>
                   </Col>

@@ -37,15 +37,15 @@ const RegularTables = () => {
                 <SortingTable
                   thead={[
                     { text: "Nombre" },
-                    { text: "Cargo" },
+                    { text: "Email" },
                     { text: "Telefono" },
                   ]}
                   tbody={[
                     {
                       data: [
-                        { text: "Damian Huanque" },
-                        { text: "Operador" },
-                        { text: "+56 9 9617 7817" },
+                        { text: "Maria Albornoz" },
+                        { text: "comite.ap.bramadero@gmail.com" },
+                        { text: "+56 9 4131 8204" },
                       ],
                      },
                                                           

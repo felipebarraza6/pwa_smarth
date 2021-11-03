@@ -59,7 +59,7 @@ const Charts = () => {
               <CardHeader>
                 <h5 className="card-category">PROMEDIO EN LITROS</h5>
                 <CardTitle tag="h3">
-                  <i className="tim-icons icon-chart-bar-32 text-info" /> Nivel de caudal
+                  <i className="tim-icons icon-chart-bar-32 text-info" /> Nivel de estanque
                 </CardTitle>
               </CardHeader>
               <CardBody>
