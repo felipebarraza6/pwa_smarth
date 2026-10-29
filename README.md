@@ -1,4 +1,35 @@
-# [Black Dashboard PRO React](https://demos.creative-tim.com/black-dashboard-pro-react/#/admin/dashboard) [![Tweet](https://img.shields.io/twitter/url/http/shields.io.svg?style=social&logo=twitter)](https://twitter.com/intent/tweet?url=https%3A%2F%2Fdemos.creative-tim.com%2Fblack-dashboard-pro-react%2F%23%2Fadmin%2Fdashboard&text=Black%20Dashboard%20PRO%20React%20-%20Premium%20Bootstrap%20Admin%20Template&original_referer=https%3A%2F%2Fdemos.creative-tim.com%2Fblack-dashboard-pro-react%2F&via=creativetim&hashtags=react%2Cbootstrap%2Creactstrap%2Ccreativetim%2Ccreativetimofficial)
+# pwa_smarth
+
+## Descripción
+PWA SmartHydro (legado).
+
+## Arquitectura
+Carpetas principales: `Documentation/`, `conf/`, `github-assets/`, `public/`, `src/`.
+Contenedores definidos en Dockerfile/compose del repo.
+
+## Setup local
+1. Clonar el repo y copiar `.env.example` a `.env` (no versionar `.env`).
+2. Completar las variables con valores de desarrollo (pedirlos a Felipe; nunca por chat ni en commits).
+3. Instalar dependencias (`npm ci`) y levantar el servicio.
+
+## Variables de entorno
+Solo nombres; valores en el servidor o en GitHub Secrets:
+- (sin variables detectadas)
+
+## Deploy
+- Deploy **manual**; nada va a `production` sin aprobación de Felipe.
+- No usar `down`, `--volumes` ni `prune` en servidores de producción.
+
+## Runbook
+- Revisar logs del contenedor/servicio antes de reiniciar; avisar antes de reiniciar servicios productivos.
+- Ante un secreto filtrado: rotar, actualizar el servidor y ver `SECURITY.md`.
+- Ante errores de CI: un solo re-run por PR.
+
+---
+
+## Documentación previa
+
+### [Black Dashboard PRO React](https://demos.creative-tim.com/black-dashboard-pro-react/#/admin/dashboard) [![Tweet](https://img.shields.io/twitter/url/http/shields.io.svg?style=social&logo=twitter)](https://twitter.com/intent/tweet?url=https%3A%2F%2Fdemos.creative-tim.com%2Fblack-dashboard-pro-react%2F%23%2Fadmin%2Fdashboard&text=Black%20Dashboard%20PRO%20React%20-%20Premium%20Bootstrap%20Admin%20Template&original_referer=https%3A%2F%2Fdemos.creative-tim.com%2Fblack-dashboard-pro-react%2F&via=creativetim&hashtags=react%2Cbootstrap%2Creactstrap%2Ccreativetim%2Ccreativetimofficial)
 
 
 
